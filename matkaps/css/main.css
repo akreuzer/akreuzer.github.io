@@ -1,0 +1,35 @@
+body { font-size: 15px }
+
+.slides { font-size: small
+        ; color: #FF8C00
+	; text-decoration: none 
+        ; font-weight: bold}
+
+.slides:hover { color: #FF8C00 }
+
+.mr     { font-size: small
+	; color: #5555EE 
+	; text-decoration: none
+	; font-weight: bold }
+
+.mr:hover { color: #5555EE }
+
+.doi    { font-size: small
+	; color: #666666
+	; text-decoration: none
+        ; font-weight: bold }
+
+.doi:hover { color: #666666 }
+
+.title  { font-style: italic }
+
+#lastmod { font-style: italic
+         ; font-size: small }
+
+li { margin-bottom: 1ex }
+
+.cell.highlight { background-color: #FEDFB3; padding-left: 0.5cm ; padding-right: 0.5cm }
+
+.sub { font-size: 65%
+     ; vertical-align: sub
+     }

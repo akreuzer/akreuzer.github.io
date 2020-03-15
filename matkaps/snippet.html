@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+        <title>Some snippets for latex et al</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/full.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css">
+	      
+        <!-- syntax highlighting CSS -->
+	      <link rel="stylesheet" href="css/syntax.css">
+	      
+        <link rel="icon" type="image/png" href="favicon.png" />
+    </head>
+<body>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//alexod.hercules.uberspace.de/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//alexod.hercules.uberspace.de/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
+  
+
+  <div class="site-body">
+    <div class="site-center">
+      <div class="col">
+      <div class="col"><div class="cell">
+<h3>Footnote without any mark</h3>
+<figure class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\makeatletter</span>
+<span class="k">\let\@</span>thefnmark<span class="k">\relax</span>
+<span class="k">\@</span>footnotetext<span class="p">{</span>Revision of XXX1. Compiled on <span class="k">\today</span>.<span class="p">}</span>
+<span class="k">\makeatother</span></code></pre></figure>
+</div>
+
+<div class="cell">
+<h3> Sam Buss G&ouml;del numbering</h3>
+<figure class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="c">% Sam Buss Goedel numbering</span>
+<span class="k">\newbox\gnBoxA</span>
+<span class="k">\newdimen\gnCornerHgt</span>
+<span class="k">\setbox\gnBoxA</span>=<span class="k">\hbox</span><span class="p">{$</span><span class="nv">\ulcorner</span><span class="p">$}</span>
+<span class="k">\global\gnCornerHgt</span>=<span class="k">\ht\gnBoxA</span>
+<span class="k">\newdimen\gnArgHgt</span>
+<span class="k">\def\QuasiQuote</span> #1<span class="p">{</span> <span class="c">%</span>
+<span class="k">\setbox\gnBoxA</span>=<span class="k">\hbox</span><span class="p">{$</span><span class="nb">#</span><span class="m">1</span><span class="p">$}</span><span class="c">%</span>
+<span class="k">\gnArgHgt</span>=<span class="k">\ht\gnBoxA</span><span class="c">%</span>
+<span class="k">\ifnum</span>     <span class="k">\gnArgHgt</span>&lt;<span class="k">\gnCornerHgt</span> <span class="k">\gnArgHgt</span>=0pt<span class="c">%</span>
+<span class="k">\else</span> <span class="k">\advance</span> <span class="k">\gnArgHgt</span> by -<span class="k">\gnCornerHgt</span><span class="c">%</span>
+<span class="k">\fi</span> <span class="k">\raise\gnArgHgt\hbox</span><span class="p">{$</span><span class="nv">\ulcorner</span><span class="p">$}</span> <span class="k">\box\gnBoxA</span> <span class="c">%</span>
+<span class="k">\raise\gnArgHgt\hbox</span><span class="p">{$</span><span class="nv">\urcorner</span><span class="p">$}}</span></code></pre></figure>
+</div>
+
+<div class="cell">
+<h3>No Margin in gtk3 Applications like evince</h3>
+Change the css property margin to 0 on .window-frame in the style file, e.g.
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.window-frame</span> <span class="p">{</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <div class="site-center">
+      <div class="col">
+	Last modified: December 2018
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
