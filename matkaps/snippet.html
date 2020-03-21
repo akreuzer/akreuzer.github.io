@@ -18,21 +18,27 @@
     </head>
 <body>
 
-<!-- Piwik -->
+
+
+<!-- Matomo -->
 <script type="text/javascript">
-  var _paq = _paq || [];
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="//alexod.hercules.uberspace.de/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
+    var u="https://pluto.aleph.one/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//alexod.hercules.uberspace.de/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+<noscript><p><img src="https://pluto.aleph.one/matomo/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
+
+
 
 
   
@@ -80,7 +86,7 @@ Change the css property margin to 0 on .window-frame in the style file, e.g.
   <div class="site-footer">
     <div class="site-center">
       <div class="col">
-	Last modified: December 2018
+	Last modified: March 2020
       </div>
     </div>
   </div>
